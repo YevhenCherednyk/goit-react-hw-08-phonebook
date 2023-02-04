@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/operations';
 import { toast } from 'react-toastify';
 import { Form, Label, Span, Input, Button } from './ContactForm.styled';
-import { selectContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/contacts/selectors';
 
 export default function ContactForm() {
   const contacts = useSelector(selectContacts);
