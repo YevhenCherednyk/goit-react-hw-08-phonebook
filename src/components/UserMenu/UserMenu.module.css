@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #e2e2e2;
+}
+
+.username {
+    padding: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+}
+
+.logoutbtn{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    color: #e2e2e2;
+    border: none;
+    border-radius: 4px;
+    background-color: #24292f;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        
+}
+
+.logoutbtn:hover,
+.logoutbtn:focus {
+    background-color: #454545;
+}

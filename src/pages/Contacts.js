@@ -29,9 +29,9 @@ const Contacts = () => {
           <ContactForm />
         </Section>
         <Section title="Contacts">
-          {/* <Filter /> */}
+          <Filter />
           {isLoading && !error && <Loader />}
-          {/* <ContactList /> */}
+          <ContactList />
         </Section>
       </>
     </>
