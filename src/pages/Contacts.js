@@ -3,12 +3,13 @@ import Section from 'components/Section';
 import ContactForm from 'components/ContactForm';
 import Filter from 'components/Filter';
 import ContactList from 'components/ContactList';
-
+import Footer from 'components/Footer';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Loader from 'components/Loader';
 import { fetchContacts } from 'redux/contacts/operations';
 import { selectIsLoading, selectError } from 'redux/contacts/selectors';
+import css from './Contacts.module.css';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const Contacts = () => {
       <Helmet>
         <title>Contacts</title>
       </Helmet>
-      <>
+      <div className={css.contactsBox}>
         <Section title="Phonebook">
           <ContactForm />
         </Section>
@@ -33,7 +34,8 @@ const Contacts = () => {
           {isLoading && !error && <Loader />}
           <ContactList />
         </Section>
-      </>
+      </div>
+      <Footer />
     </>
   );
 };

@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
+// import css from './LoginForm.module.css';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const LoginForm = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        minHeight: '100vh',
       }}
       noValidate
       onSubmit={handleSubmit}

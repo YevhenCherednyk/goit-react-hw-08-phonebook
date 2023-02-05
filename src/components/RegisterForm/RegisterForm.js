@@ -24,57 +24,38 @@ const RegisterForm = () => {
   };
 
   return (
-    <Box
-      component="form"
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
-      noValidate
-      onSubmit={handleSubmit}
-      autoComplete="off"
-    >
-      <TextField
-        // id="outlined-name-input"
-        label="Username"
-        type="text"
-        name="name"
-      />
-      <TextField
-        // id="outlined-email-input"
-        label="Email"
-        type="email"
-        name="email"
-        autoComplete="current-password"
-      />
-      <TextField
-        // id="outlined-password-input"
-        label="Password"
-        type="password"
-        name="password"
-        autoComplete="current-password"
-      />
-      <Button type="submit" variant="contained" color="primary">
-        Signup
-      </Button>
-    </Box>
-    // <form onSubmit={handleSubmit} autoComplete="off">
-    //   <label>
-    //     Username
-    //     <input type="text" name="name" />
-    //   </label>
-    //   <label>
-    //     Email
-    //     <input type="email" name="email" />
-    //   </label>
-    //   <label>
-    //     Password
-    //     <input type="password" name="password" />
-    //   </label>
-    //   <button type="submit">Register</button>
-    // </form>
+    <>
+      <Box
+        component="form"
+        sx={{
+          '& .MuiTextField-root': { m: 1, width: '25ch' },
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          minHeight: '100vh',
+        }}
+        noValidate
+        onSubmit={handleSubmit}
+        autoComplete="off"
+      >
+        <TextField label="Username" type="text" name="name" />
+        <TextField
+          label="Email"
+          type="email"
+          name="email"
+          autoComplete="current-password"
+        />
+        <TextField
+          label="Password"
+          type="password"
+          name="password"
+          autoComplete="current-password"
+        />
+        <Button type="submit" variant="contained" color="primary">
+          Signup
+        </Button>
+      </Box>
+    </>
   );
 };
 

@@ -7,13 +7,23 @@ const Navigation = () => {
 
   return (
     <nav>
-      <NavLink className={css.link} to="/">
-        Home
-      </NavLink>
-      {isLoggedIn && (
-        <NavLink className={css.link} to="/contacts">
-          Contacts
+      <div className={css.link}>
+        <NavLink
+          className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+          to="/"
+        >
+          Home
         </NavLink>
+      </div>
+      {isLoggedIn && (
+        <div className={css.link}>
+          <NavLink
+            className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+            to="/contacts"
+          >
+            Contacts
+          </NavLink>
+        </div>
       )}
     </nav>
   );
