@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet';
 import LoginForm from 'components/LoginForm';
-import Footer from 'components/Footer';
 
 const Login = () => {
   return (
@@ -9,7 +8,6 @@ const Login = () => {
         <title>Login</title>
       </Helmet>
       <LoginForm />
-      <Footer />;
     </div>
   );
 };

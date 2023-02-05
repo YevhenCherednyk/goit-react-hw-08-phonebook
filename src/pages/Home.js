@@ -1,12 +1,10 @@
 import HomePage from 'components/HomePage';
-import Footer from 'components/Footer';
 
 const Home = () => {
   return (
-    <>
+    <div>
       <HomePage />
-      <Footer />;
-    </>
+    </div>
   );
 };
 

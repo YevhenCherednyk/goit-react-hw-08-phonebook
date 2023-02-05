@@ -1,15 +1,11 @@
-.wrapper {
+.btnBox{
     display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    gap: 20px;
 }
 
-.username {
-    padding: 12px;
-    font-weight: 700;
-}
-
-.logoutbtn{
+.btn{
     display: flex;
     text-align: center;
     align-items: center;
@@ -21,13 +17,13 @@
     line-height: inherit;
     font-weight: 700;
     border: none;
-    color: inherit;
+    color: var(--main-txt-color);
     border-radius: 4px;
     background-color: var(--header-bg-color);
-    transition: color var(--main-animation);
+    transition: background-color var(--main-animation);
 }
 
-.logoutbtn:hover,
-.logoutbtn:focus {
-    color: var(--txt-hover);
+.btn:hover,
+.btn:focus {
+    background-color: var(--btn-hover-bg-color);
 }

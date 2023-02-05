@@ -11,6 +11,7 @@ body {
   font-size: 16px;
   line-height: 1.88;
   color: var(--main-txt-color);
+  background-color: var(--main-bg-color);
 }
 
 code {
@@ -58,8 +59,9 @@ button {
   --dark-txt-color: #000000;
   --txt-hover: #b9b9b9;
   --active-txt-color: #f06f06;
+  --main-bg-color:#e7ecf2;
   --btn-hover-bg-color: #454545;
-  --box-shadow: 0 0 50px 5px #f06f06;
+  --box-shadow: 0 0 50px 5px #000000;
   --main-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 

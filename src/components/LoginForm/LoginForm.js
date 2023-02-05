@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
+import Footer from 'components/Footer';
 // import css from './LoginForm.module.css';
 
 const LoginForm = () => {
@@ -23,35 +24,38 @@ const LoginForm = () => {
   };
 
   return (
-    <Box
-      component="form"
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        minHeight: '100vh',
-      }}
-      noValidate
-      onSubmit={handleSubmit}
-      autoComplete="off"
-    >
-      <TextField
-        label="Email"
-        type="email"
-        name="email"
-        autoComplete="current-password"
-      />
-      <TextField
-        label="Password"
-        type="password"
-        name="password"
-        autoComplete="current-password"
-      />
-      <Button type="submit" variant="contained" color="primary">
-        Login
-      </Button>
-    </Box>
+    <>
+      <Box
+        component="form"
+        sx={{
+          '& .MuiTextField-root': { m: 1, width: '25ch' },
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          minHeight: '100vh',
+        }}
+        noValidate
+        onSubmit={handleSubmit}
+        autoComplete="off"
+      >
+        <TextField
+          label="Email"
+          type="email"
+          name="email"
+          autoComplete="current-password"
+        />
+        <TextField
+          label="Password"
+          type="password"
+          name="password"
+          autoComplete="current-password"
+        />
+        <Button type="submit" variant="contained" color="primary">
+          Login
+        </Button>
+      </Box>
+      <Footer />
+    </>
   );
 };
 
