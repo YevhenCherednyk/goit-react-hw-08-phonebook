@@ -35,9 +35,10 @@
     margin-right: auto;
     width: 200px;
     height: 50px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    /* line-height: 1.88; */
     color: var(--light-txt-color);
     box-shadow: var(--btn-shadow);
     border: none;
