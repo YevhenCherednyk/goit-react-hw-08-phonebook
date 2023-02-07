@@ -25,7 +25,7 @@ const Contacts = () => {
       <Helmet>
         <title>Contacts</title>
       </Helmet>
-      <div className={css.contactsBox}>
+      <div className={css.contacts__container}>
         <Section title="Phonebook">
           <ContactForm />
         </Section>

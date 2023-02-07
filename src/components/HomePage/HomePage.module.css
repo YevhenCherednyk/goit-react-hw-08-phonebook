@@ -1,13 +1,9 @@
-.sectionHome {
+.section__home {
     min-height: 100vh;
     text-align: center;
     color: var(--dark-txt-color);
 }
 
-.title {
+.home__title {
     font-size: 42px;
-}
-
-.authBtn{
-    color: var(--dark-txt-color);
 }

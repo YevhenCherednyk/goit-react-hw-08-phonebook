@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setQuery } from 'redux/filter/filterSlice';
-import { Label, Span, Input } from './Filter.styled';
 import { selectFilter } from 'redux/contacts/selectors';
+import css from './Filter.module.css';
 
 const Filter = () => {
   const dispatch = useDispatch();
@@ -15,10 +15,16 @@ const Filter = () => {
   const handleChange = evt => onChange(evt.target.value);
 
   return (
-    <Label>
-      <Span>Find contacts by name</Span>
-      <Input type="text" value={query} onChange={handleChange} />
-    </Label>
+    <label className={css.filter__lable}>
+      <p className={css.filter__description}>Find contacts by name</p>
+      <input
+        className={css.filter__input}
+        type="text"
+        value={query}
+        onChange={handleChange}
+        placeholder="Enter the search name"
+      />
+    </label>
   );
 };
 

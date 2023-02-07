@@ -3,13 +3,13 @@ import css from './HomeAuthNav.module.css';
 
 const HomeAuthNav = () => {
   return (
-    <div className={css.btnBox}>
-      <button className={css.btn}>
-        <NavLink to="/register">Register</NavLink>
-      </button>
-      <button className={css.btn}>
-        <NavLink to="/login">Log In</NavLink>
-      </button>
+    <div className={css.homenav}>
+      <NavLink className={css.homenav__link} to="/register">
+        Register
+      </NavLink>
+      <NavLink className={css.homenav__link} to="/login">
+        Log In
+      </NavLink>
     </div>
   );
 };

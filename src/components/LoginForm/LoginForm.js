@@ -1,11 +1,12 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import Footer from 'components/Footer';
-// import css from './LoginForm.module.css';
+// import { css } from '@emotion/react';
+import css from './LoginForm.module.css';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -26,33 +27,32 @@ const LoginForm = () => {
   return (
     <>
       <Box
+        className={css.login__form}
         component="form"
         sx={{
           '& .MuiTextField-root': { m: 1, width: '25ch' },
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          minHeight: '100vh',
         }}
         noValidate
         onSubmit={handleSubmit}
         autoComplete="off"
       >
         <TextField
+          className={css.login__input}
           label="Email"
           type="email"
           name="email"
           autoComplete="current-password"
         />
         <TextField
+          className={css.login__input}
           label="Password"
           type="password"
           name="password"
           autoComplete="current-password"
         />
-        <Button type="submit" variant="contained" color="primary">
-          Login
-        </Button>
+        <button className={css.login__btn} type="submit">
+          Log In
+        </button>
       </Box>
       <Footer />
     </>

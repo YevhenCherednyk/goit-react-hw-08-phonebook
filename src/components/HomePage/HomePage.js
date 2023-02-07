@@ -8,8 +8,8 @@ const HomePage = () => {
 
   return (
     <>
-      <section className={css.sectionHome}>
-        <h1 className={css.title}>Welcome to PhoneBook</h1>
+      <section className={css.section__home}>
+        <h1 className={css.home__title}>Welcome to PhoneBook</h1>
         {!isLoggedIn && <HomeAuthNav />}
       </section>
       <Footer />

@@ -1,21 +1,25 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/operations';
-import { Item, ContactInfo, NameBox, Button } from './ContactItem.styled';
+import css from './ContactItem.module.css';
 
 const ContactItem = ({ contact: { id, name, number } }) => {
   const dispatch = useDispatch();
   const handleDelete = () => dispatch(deleteContact(id));
 
   return (
-    <Item key={id}>
-      <ContactInfo>
-        <NameBox>{name}</NameBox> : {number}
-      </ContactInfo>
-      <Button type="button" onClick={handleDelete}>
+    <li className={css.contact__item} key={id}>
+      <p className={css.contact__description}>
+        <span className={css.contact__name}>{name}</span> : {number}
+      </p>
+      <button
+        className={css.contact__deletebtn}
+        type="button"
+        onClick={handleDelete}
+      >
         Delete
-      </Button>
-    </Item>
+      </button>
+    </li>
   );
 };
 
