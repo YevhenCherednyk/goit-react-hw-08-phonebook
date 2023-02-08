@@ -33,3 +33,8 @@ transition: background-color var(--main-animation)
 .contact__deletebtn:focus {
     background-color: var(--btn-hover-bg-color);
 }
+
+.contact__deletebtn:disabled {
+    background-color: #bbbbbb;
+}
+

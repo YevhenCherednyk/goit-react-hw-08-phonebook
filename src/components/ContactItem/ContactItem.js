@@ -2,10 +2,15 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/operations';
 import css from './ContactItem.module.css';
+import { useState } from 'react';
 
 const ContactItem = ({ contact: { id, name, number } }) => {
   const dispatch = useDispatch();
-  const handleDelete = () => dispatch(deleteContact(id));
+  const [isDeleting, setIsDeleting] = useState(false);
+  const handleDelete = () => {
+    setIsDeleting(true);
+    dispatch(deleteContact(id));
+  };
 
   return (
     <li className={css.contact__item} key={id}>
@@ -15,9 +20,10 @@ const ContactItem = ({ contact: { id, name, number } }) => {
       <button
         className={css.contact__deletebtn}
         type="button"
+        disabled={isDeleting}
         onClick={handleDelete}
       >
-        Delete
+        {isDeleting ? 'Deleting...' : 'Delete'}
       </button>
     </li>
   );

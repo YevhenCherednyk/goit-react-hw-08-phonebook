@@ -5,7 +5,7 @@ const HomeAuthNav = () => {
   return (
     <div className={css.homenav}>
       <NavLink className={css.homenav__link} to="/register">
-        Register
+        Sign in
       </NavLink>
       <NavLink className={css.homenav__link} to="/login">
         Log In

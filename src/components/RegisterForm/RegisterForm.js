@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-// import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import Footer from 'components/Footer';
@@ -56,7 +55,7 @@ const RegisterForm = () => {
           variant="contained"
           color="primary"
         >
-          Register
+          Sign In
         </button>
       </Box>
       <Footer />

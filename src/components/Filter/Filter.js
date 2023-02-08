@@ -22,7 +22,6 @@ const Filter = () => {
         type="text"
         value={query}
         onChange={handleChange}
-        placeholder="Enter the search name"
       />
     </label>
   );

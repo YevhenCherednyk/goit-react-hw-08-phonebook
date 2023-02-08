@@ -9,7 +9,7 @@ const AuthNav = () => {
           className={({ isActive }) => (isActive ? 'active' : 'inactive')}
           to="/register"
         >
-          Register
+          Sign In
         </NavLink>
       </div>
       <div className={css.link}>
