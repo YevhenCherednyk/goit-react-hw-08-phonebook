@@ -13,9 +13,6 @@ export default function ContactForm() {
 
     const { name, number } = evt.target;
 
-    console.log(name.value);
-    console.log(number.value);
-
     if (contacts.find(contact => contact.name === name.value)) {
       return toast.error(`Sorry, ${name.value} is already in contacts.`);
     }
@@ -60,7 +57,9 @@ export default function ContactForm() {
           required
         />
       </label>
-      <button className={css.contact__addbtn} type="submit">Add contact</button>
+      <button className={css.contact__addbtn} type="submit">
+        Add contact
+      </button>
     </form>
   );
 }
